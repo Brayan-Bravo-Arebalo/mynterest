@@ -1,4 +1,5 @@
 body{
-    background-image: url(../image/puerta-1920x2588.jpg);
+    background-image: url(../image/library-1920x2880.jpg);
     background-size: cover;
+    backdrop-filter: blur(10px);
 }
