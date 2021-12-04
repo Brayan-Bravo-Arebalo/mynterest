@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/inicioSesion.css">
 </head>
+
 <body class="m-0 vh-100 row justify-content-center align-items-center" style="backdrop-filter: blur(5px)">
 
     <div class="bg-white ">
-        <form>
-            <div><h2>Inicio de Sesión</h2></div>
+        <form action="../backend/inicioSesion/loginController.php" method="POST">
+            <div>
+                <h2>Inicio de Sesión</h2>
+            </div>
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Correo</label>
             </div>
 
@@ -24,10 +27,16 @@
                 <label for="floatingPassword">Contraseña</label>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" onclick="login()" class="btn btn-primary">Submit</button>
+            <div hidden>
+                <button id="btnLogin" type="submit">login</button>
+                <input type="password2" name="password2" class="form-control" id="password2">
+
+            </div>
         </form>
     </div>
-
+    <script src="../js/md5.js"></script>
+    <script src="../js/inicioSesion.js"></script>
 </body>
 
 </html>
