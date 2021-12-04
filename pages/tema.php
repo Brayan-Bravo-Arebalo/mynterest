@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,37 +41,38 @@
     </header>
 
     <div class="card">
-        <form action="">
+        <form action="../backend/insertarTema/controller.php" method="POST">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder=" ">
+                <input type="text" class="form-control" name="titulo" id="floatingInput" placeholder=" ">
                 <label for="floatingInput">Titulo</label>
             </div>
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 400px"></textarea>
+                <textarea class="form-control" name="importancia" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 400px"></textarea>
                 <label for="floatingTextarea2">Importancia</label>
             </div>
             <br>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" name="etiqueta1" aria-label="Default select example">
                 <option selected>Sin Etiqueta</option>
                 <option value="1">Etiqueta 1</option>
                 <option value="2">Etiqueta 2</option>
                 <option value="3">Etiqueta 3</option>
             </select>
             <br>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" name="etiqueta2" aria-label="Default select example">
                 <option selected>Sin Etiqueta</option>
                 <option value="1">Etiqueta 1</option>
                 <option value="2">Etiqueta 2</option>
                 <option value="3">Etiqueta 3</option>
             </select>
             <br>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" name="etiqueta3" aria-label="Default select example">
                 <option selected>Sin Etiqueta</option>
                 <option value="1">Etiqueta 1</option>
                 <option value="2">Etiqueta 2</option>
                 <option value="3">Etiqueta 3</option>
             </select>
             <br>
+            <input type="text" name="usuario" value="<?php echo $_SESSION['ID'] ?>">
             <div><button class="btn btn-primary">Publicar</button></div>
         </form>
     </div>
