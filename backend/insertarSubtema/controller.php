@@ -10,9 +10,9 @@ $idusuario = $_POST["usuario"];
 if (!empty($titulo) && !empty($texto) && !empty($cita) && !empty($idtema) && !empty($idusuario)) {
     $id = insertarTema($titulo, $texto, $cita, $idusuario, $idtema);
     if ($id = 1) {
-        header("location:correcto.php");
+        header("location:../../pages/paginaPrincipal.php");
     } else {
-        header("location:error.php");
+        header("location:../../pages/Error.php");
     }
 
 // echo $titulo;
@@ -23,7 +23,7 @@ if (!empty($titulo) && !empty($texto) && !empty($cita) && !empty($idtema) && !em
 
 
 } else {
-    header("location:error.php");
+    header("location:../../pages/Error.php");
 // echo $titulo;
 // echo $texto;
 // echo $cita;

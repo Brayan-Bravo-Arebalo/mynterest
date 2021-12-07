@@ -8,7 +8,7 @@ if (!empty($json) && !empty($id)) {
 
     $idusuario = $id;
     eliminarEtiquetasFav($idusuario);
-    
+
     $array = explode(",", $json);
     foreach ($array as &$valor) {
 
@@ -19,16 +19,14 @@ if (!empty($json) && !empty($id)) {
 
     // $id = insertarTema($json, $id);
 
-    // if ($id =1) {
+    if ($id = 1) {
 
-
-    //     //header("location:../../pages/paginaPrincipal.php");
-    // } else {
-    //     header("location:error.php");
-    // }
-
+        header("location:../../pages/etiquetas.php");
+    } else {
+        header("location:../../pages/Error.php");
+    }
 } else {
-    // header("location:error.php");
+    header("location:../../pages/Error.php");
 
     echo $json;
 }
