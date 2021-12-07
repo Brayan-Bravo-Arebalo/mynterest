@@ -76,14 +76,21 @@ if (isset($_SESSION["user"])) {
 
     <template id="tema">
 
+
+
+
+
         <br>
         <div class="card text-center">
             <div class="card-header">
 
-                <button type="button" class="btn btn-white position-relative">
+                <button type="button" class="btn btn-white position-relative w-100">
                     <h5 class="nombreTema"></h5>
-                    <span class="cantidad" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        <div class="cantidad"></div>
                     </span>
+                    <!-- <span class="badge bg-danger"><div class="cantidad"></div></span> -->
+
                 </button>
 
 
@@ -99,11 +106,27 @@ if (isset($_SESSION["user"])) {
                     <option value="2">Antiguos</option>
                     <option value="3">Mas vistos</option>
                 </select>
-                <div class="accordion" id="accordionExample">
 
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button id="btnAcordion" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ver" aria-expanded="false" aria-controls="ver">
+                            <h5 class="nombreSubtema">ver</h5>
+                        </button>
+                    </h2>
+                    <div id="ver" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                            <div class="accordion" id="accordionExample">
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+
+
                 <div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button id="modal" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Agragar
                     </button>
 
@@ -116,7 +139,7 @@ if (isset($_SESSION["user"])) {
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="" method="POST">
+                                    <form action="../backend/insertarSubtema/controller.php" method="POST">
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" name="titulo" id="floatingInput" placeholder=" ">
                                             <label for="floatingInput">Titulo</label>
@@ -132,7 +155,8 @@ if (isset($_SESSION["user"])) {
                                         <br>
                                         <div hidden>
                                             <input id="idtema" type="text" name="idtema">
-                                            <button id="enviar"></button>
+                                            <input type="text" name="usuario" value="<?php echo $_SESSION['ID'] ?>">
+                                            <button class="enviar"></button>
                                         </div>
 
 
@@ -179,6 +203,7 @@ if (isset($_SESSION["user"])) {
 
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/paginaPrincipal.js"></script>
+    <script src="../js/subtema.js"></script>
 </body>
 
 </html>
