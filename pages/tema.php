@@ -1,9 +1,9 @@
 <?php
-    session_start();
-    if(isset($_SESSION["user"])){
-    } else {
-        header("location:../pages/InicioSesion.php");
-    }
+session_start();
+if (isset($_SESSION["user"])) {
+} else {
+    header("location:../pages/InicioSesion.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -66,25 +66,19 @@
                 <label for="floatingTextarea2">Importancia</label>
             </div>
             <br>
-            <select class="form-select" name="etiqueta1" aria-label="Default select example">
-                <option value="1">Sin Etiqueta</option>
-                <option value="2">Etiqueta 1</option>
-                <option value="3">Etiqueta 2</option>
-                <option value="4">Etiqueta 3</option>
+            <select id="etiqueta1" class="form-select" name="etiqueta1" aria-label="Default select example">
+                
+               
             </select>
             <br>
-            <select class="form-select" name="etiqueta2" aria-label="Default select example">
-                <option value="1">Sin Etiqueta</option>
-                <option value="2">Etiqueta 1</option>
-                <option value="3">Etiqueta 2</option>
-                <option value="4">Etiqueta 3</option>
+            <select id="etiqueta2" class="form-select" name="etiqueta2" aria-label="Default select example">
+               
+                
             </select>
             <br>
-            <select class="form-select" name="etiqueta3" aria-label="Default select example">
-                <option value="1">Sin Etiqueta</option>
-                <option value="2">Etiqueta 1</option>
-                <option value="3">Etiqueta 2</option>
-                <option value="4">Etiqueta 3</option>
+            <select id="etiqueta3" class="form-select" name="etiqueta3" aria-label="Default select example">
+                
+                
             </select>
             <br>
             <div hidden>
@@ -100,6 +94,11 @@
     <footer>
 
     </footer>
+
+    <template id="option">
+        <option class="opcion" value="2">Etiqueta 1</option>
+
+    </template>
     <script src="../js/ValidadorTexto.js"></script>
     <script src="../js/tema.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
