@@ -202,7 +202,7 @@ if (isset($_SESSION["user"])) {
     </template>
 
     <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <script src="../js/misTemas.js"></script>
+    <script src="../js/TemasDeOtrosUsuarios.js"></script>
     <script src="../js/subtema.js"></script>
 </body>
 

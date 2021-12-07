@@ -34,19 +34,19 @@ if (isset($_SESSION["user"])) {
                                     Tema
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Mis Temas</a></li>
+                                    <li><a class="dropdown-item" href="misTemas.php">Mis Temas</a></li>
                                     <li><a class="dropdown-item" href="#">Otros temas</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="../pages/tema.php">Iniciar Tema</a></li>
+                                    <li><a class="dropdown-item" href="tema.php">Iniciar Tema</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="">Mis Etiquetas</a>
+                                <a class="nav-link active" href="etiquetas.php">etiquetas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="../pages/cerrarSesion.php">cerrar Sesion</a>
+                                <a class="nav-link active" href="cerrarSesion.php">cerrar Sesion</a>
                             </li>
                         </ul>
                     </div>
@@ -67,18 +67,18 @@ if (isset($_SESSION["user"])) {
             </div>
             <br>
             <select id="etiqueta1" class="form-select" name="etiqueta1" aria-label="Default select example">
-                
-               
+
+
             </select>
             <br>
             <select id="etiqueta2" class="form-select" name="etiqueta2" aria-label="Default select example">
-               
-                
+
+
             </select>
             <br>
             <select id="etiqueta3" class="form-select" name="etiqueta3" aria-label="Default select example">
-                
-                
+
+
             </select>
             <br>
             <div hidden>

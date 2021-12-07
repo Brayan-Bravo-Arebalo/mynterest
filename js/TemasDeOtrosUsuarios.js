@@ -59,31 +59,27 @@ const llamatemas = () => {
 
             for (let dato of datos) {
                 let contador = 0;
+                let contador2 = 0;
 
-                for (let index = 0; index < etiquetasFavoritas.length; index++) {
+                // for (let index = 0; index < etiquetasFavoritas.length; index++) {
 
-                    if (dato.id_usuario != iduser) {
-                        contador++
-                    }
-
-                }
-
-                if (contador > 0) {
-
-
+                if (dato.id_usuario == iduser) {
+                    contador++
+                } else {
+                    contador2++
                     const clone = templateTema.cloneNode(true);
                     clone.querySelector(".nombreTema").textContent = dato.titulo;
                     clone.querySelector(".importancia").textContent = dato.importancia;
                     clone.querySelector("#idtema").value = dato.id_tema;
-                    let btn =clone.querySelector("#btnEnvio")
-                    btn.setAttribute("onclick","btnEnv('"+dato.id_tema+"')")
+                    let btn = clone.querySelector("#btnEnvio")
+                    btn.setAttribute("onclick","btnEnv('"+contador2+"')")
                     let modal = clone.querySelector("#modal")
-                    modal.setAttribute("data-bs-target","#modal"+dato.id_tema)
-                    clone.querySelector("#exampleModal").id = "modal"+dato.id_tema
+                    modal.setAttribute("data-bs-target", "#modal" + dato.id_tema)
+                    clone.querySelector("#exampleModal").id = "modal" + dato.id_tema
                     let btntema = clone.querySelector("#btnAcordion")
-                    btntema.setAttribute("data-bs-target","#vertema"+dato.id_tema)
-                    btntema.setAttribute("aria-controls","vertema"+dato.id_tema)
-                    clone.querySelector("#ver").id = "vertema"+dato.id_tema
+                    btntema.setAttribute("data-bs-target", "#vertema" + dato.id_tema)
+                    btntema.setAttribute("aria-controls", "vertema" + dato.id_tema)
+                    clone.querySelector("#ver").id = "vertema" + dato.id_tema
                     let cantidad = 0;
                     subtema.forEach(element => {
                         if (element.id_tema == dato.id_tema) {
@@ -108,6 +104,49 @@ const llamatemas = () => {
                     listaTemas.appendChild(fragment)
 
                 }
+
+                // }
+
+                // if (contador > 0) {
+
+
+                //     const clone = templateTema.cloneNode(true);
+                //     clone.querySelector(".nombreTema").textContent = dato.titulo;
+                //     clone.querySelector(".importancia").textContent = dato.importancia;
+                //     clone.querySelector("#idtema").value = dato.id_tema;
+                //     let btn = clone.querySelector("#btnEnvio")
+                //     btn.setAttribute("onclick", "btnEnv('" + dato.id_tema + "')")
+                //     let modal = clone.querySelector("#modal")
+                //     modal.setAttribute("data-bs-target", "#modal" + dato.id_tema)
+                //     clone.querySelector("#exampleModal").id = "modal" + dato.id_tema
+                //     let btntema = clone.querySelector("#btnAcordion")
+                //     btntema.setAttribute("data-bs-target", "#vertema" + dato.id_tema)
+                //     btntema.setAttribute("aria-controls", "vertema" + dato.id_tema)
+                //     clone.querySelector("#ver").id = "vertema" + dato.id_tema
+                //     let cantidad = 0;
+                //     subtema.forEach(element => {
+                //         if (element.id_tema == dato.id_tema) {
+
+                //             cantidad++
+                //             const clone2 = templateSubtema.cloneNode(true);
+                //             clone2.querySelector(".nombreSubtema").textContent = element.titulo;
+                //             clone2.querySelector(".nombreUsuario").textContent = element.nombre;
+                //             clone2.querySelector(".Contenido").textContent = element.texto;
+                //             clone2.querySelector(".cita").textContent = element.cita;
+                //             clone2.querySelector("#collapseThree").id = "id_tema" + element.id_subtema;
+                //             let cam = clone2.querySelector("#btnAcordion")
+                //             cam.setAttribute("aria-controls", "id_tema" + element.id_subtema);
+                //             cam.setAttribute("data-bs-target", "#" + "id_tema" + element.id_subtema);
+                //             fragment2.appendChild(clone2)
+                //         }
+
+                //     });
+                //     clone.querySelector(".cantidad").textContent = cantidad;
+                //     clone.querySelector(".accordion").appendChild(fragment2);
+                //     fragment.appendChild(clone);
+                //     listaTemas.appendChild(fragment)
+
+                // }
 
 
                 // console.log("id tema:" + dato.id_tema);

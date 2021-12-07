@@ -1,5 +1,7 @@
 const btnEnv = (ele) =>{
     var el = ele;
-    document.querySelectorAll(".enviar")[el-1].click();
+    console.log(ele);
+    const enviar = document.querySelectorAll(".enviar")
+    enviar[el-1].click();
     
 }

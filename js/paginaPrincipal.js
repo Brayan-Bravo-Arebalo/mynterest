@@ -59,6 +59,7 @@ const llamatemas = () => {
 
             for (let dato of datos) {
                 let contador = 0;
+                let contador2 = 0;
 
                 for (let index = 0; index < etiquetasFavoritas.length; index++) {
                     if (dato.etiqueta == etiquetasFavoritas[index] || dato.etiqueta2 == etiquetasFavoritas[index] || dato.etiqueta3 == etiquetasFavoritas[index]) {
@@ -68,6 +69,7 @@ const llamatemas = () => {
                 }
 
                 if (contador > 0) {
+                    contador2++
 
 
                     const clone = templateTema.cloneNode(true);
@@ -75,7 +77,7 @@ const llamatemas = () => {
                     clone.querySelector(".importancia").textContent = dato.importancia;
                     clone.querySelector("#idtema").value = dato.id_tema;
                     let btn =clone.querySelector("#btnEnvio")
-                    btn.setAttribute("onclick","btnEnv('"+dato.id_tema+"')")
+                    btn.setAttribute("onclick","btnEnv('"+contador2+"')")
                     let modal = clone.querySelector("#modal")
                     modal.setAttribute("data-bs-target","#modal"+dato.id_tema)
                     clone.querySelector("#exampleModal").id = "modal"+dato.id_tema
