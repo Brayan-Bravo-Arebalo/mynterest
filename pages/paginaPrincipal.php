@@ -17,6 +17,7 @@ if (isset($_SESSION["user"])) {
     <title></title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/estrella.css">
 </head>
 
 <body>
@@ -104,7 +105,7 @@ if (isset($_SESSION["user"])) {
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
                     <option value="1">Recientes</option>
                     <option value="2">Antiguos</option>
-                    <option value="3">Mas vistos</option>
+                    <option value="3">Mejores Valorados</option>
                 </select>
 
                 <div class="accordion-item">
@@ -195,6 +196,24 @@ if (isset($_SESSION["user"])) {
                     </span><br>
                     <p class="Contenido"></p>
                     <cite title="Source Title" class="cita"></cite>
+
+                </div>
+                <div>
+                    <form>
+                        <p class="clasificacion">
+                            <input id="radio1" type="radio" name="estrellas" value="5">
+                            <label for="radio1">★</label>
+                            <input id="radio2" type="radio" name="estrellas" value="4">
+                            <label for="radio2">★</label>
+                            <input id="radio3" type="radio" name="estrellas" value="3">
+                            <label for="radio3">★</label>
+                            <input id="radio4" type="radio" name="estrellas" value="2">
+                            <label for="radio4">★</label>
+                            <input id="radio5" type="radio" name="estrellas" value="1">
+                            <label for="radio5">★</label>
+                        </p>
+                            <button class="btn btn-secondary btn-sm">valorar</button>
+                    </form>
                 </div>
             </div>
         </div>
