@@ -11,4 +11,5 @@
 <div>error</div>
     
 </body>
+<?php include_once("analyticstracking.php") ?>
 </html>

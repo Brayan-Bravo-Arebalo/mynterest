@@ -38,5 +38,6 @@
     <script src="../js/md5.js"></script>
     <script src="../js/inicioSesion.js"></script>
 </body>
+<?php include_once("analyticstracking.php") ?>
 
 </html>

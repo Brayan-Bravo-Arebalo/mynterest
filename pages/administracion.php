@@ -126,5 +126,6 @@
     <script src="../js/administracion.js"></script>
 
 </body>
+<?php include_once("analyticstracking.php") ?>
 
 </html>

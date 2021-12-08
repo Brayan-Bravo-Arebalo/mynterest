@@ -103,5 +103,6 @@ if (isset($_SESSION["user"])) {
     <script src="../js/tema.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
+<?php include_once("analyticstracking.php") ?>
 
 </html>

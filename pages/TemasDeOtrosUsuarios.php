@@ -205,5 +205,6 @@ if (isset($_SESSION["user"])) {
     <script src="../js/TemasDeOtrosUsuarios.js"></script>
     <script src="../js/subtema.js"></script>
 </body>
+<?php include_once("analyticstracking.php") ?>
 
 </html>

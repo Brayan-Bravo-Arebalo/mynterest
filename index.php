@@ -38,5 +38,6 @@
     </div>
 
 </body>
+<?php include_once("pages/analyticstracking.php") ?>
 
 </html>
