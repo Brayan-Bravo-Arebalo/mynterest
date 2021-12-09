@@ -80,7 +80,7 @@ const llamatemas = () => {
                     btn.setAttribute("onclick","btnEnv('"+contador2+"')")
                     let modal = clone.querySelector("#modal")
                     modal.setAttribute("data-bs-target","#modal"+dato.id_tema)
-                    clone.querySelector("#exampleModal").id = "modal"+dato.id_tema
+                    clone.querySelector("#collapseExample").id = "modal"+dato.id_tema
                     let btntema = clone.querySelector("#btnAcordion")
                     btntema.setAttribute("data-bs-target","#vertema"+dato.id_tema)
                     btntema.setAttribute("aria-controls","vertema"+dato.id_tema)
