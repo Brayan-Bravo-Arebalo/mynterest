@@ -12,7 +12,7 @@
 
 <body class="m-0 vh-100 row justify-content-center align-items-center" style="backdrop-filter: blur(5px)">
 
-    <div class="bg-white ">
+    <div class="bg-white  text-center">
         <form action="../backend/inicioSesion/loginController.php" method="POST">
             <div>
                 <h2>Inicio de Sesión</h2>
@@ -27,14 +27,24 @@
                 <label for="floatingPassword">Contraseña</label>
             </div>
             <br>
-            <button type="submit" onclick="login()" class="btn btn-primary">Submit</button>
+            <button type="submit" onclick="login()" class="btn btn-primary">Iniciar</button>
             <div hidden>
                 <button id="btnLogin" type="submit">login</button>
                 <input type="password2" name="password2" class="form-control" id="password2">
 
             </div>
         </form>
+        <hr>
+
+        <div class="text-center">
+            <button class="btn btn-primary">Facebook</button>
+            <button class="btn btn-danger">Gmail</button>
+            <button class="btn btn-primary opacity-75">Twitter</button>
+        </div>
+        <br>
     </div>
+
+
     <script src="../js/md5.js"></script>
     <script src="../js/inicioSesion.js"></script>
 </body>
