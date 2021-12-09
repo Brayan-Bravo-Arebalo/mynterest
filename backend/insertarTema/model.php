@@ -18,9 +18,9 @@ function insertarTema($titulo, $importancia, $usuario, $etiqueta1, $etiqueta2, $
 
         $stmt->execute();
 
-        $valor = $stmt->fetch(PDO::FETCH_OBJ);
+        $value = $stmt->fetch(PDO::FETCH_OBJ);
         $conn = null;
-        return $valor;
+        return $value;
     } catch (Exception $e) {
         echo "conexion fallida: " . $e->getMessage();
     }

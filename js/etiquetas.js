@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 const llamaEtiqueta = () => {
-    fetch("../backend/Llamadaetiqueta.php")
+    fetch("../backend/LlamadaEtiqueta.php")
         .then(datos => datos.json())
         .then(datos => {
             for (let dato of datos) {

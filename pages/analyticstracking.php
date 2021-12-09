@@ -21,7 +21,6 @@
 </head>
 
 <body>
-    aqui va la pagina
 </body>
 
 
