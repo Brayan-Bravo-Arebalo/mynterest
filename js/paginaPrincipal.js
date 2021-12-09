@@ -56,10 +56,10 @@ const llamatemas = () => {
     fetch("../backend/LlamadaTemas.php?tema=1")
         .then(datos => datos.json())
         .then(datos => {
-
+            let contador2 = 0;
             for (let dato of datos) {
                 let contador = 0;
-                let contador2 = 0;
+
 
                 for (let index = 0; index < etiquetasFavoritas.length; index++) {
                     if (dato.etiqueta == etiquetasFavoritas[index] || dato.etiqueta2 == etiquetasFavoritas[index] || dato.etiqueta3 == etiquetasFavoritas[index]) {
@@ -69,22 +69,26 @@ const llamatemas = () => {
                 }
 
                 if (contador > 0) {
-                    contador2++
+
+                    console.log(contador2);
+                    contador2++;
+                    console.log(contador2);
 
 
                     const clone = templateTema.cloneNode(true);
                     clone.querySelector(".nombreTema").textContent = dato.titulo;
                     clone.querySelector(".importancia").textContent = dato.importancia;
                     clone.querySelector("#idtema").value = dato.id_tema;
-                    let btn =clone.querySelector("#btnEnvio")
-                    btn.setAttribute("onclick","btnEnv('"+contador2+"')")
+                    let btn = clone.querySelector("#btnEnvio")
+                    btn.setAttribute("onclick", "btnEnv('" + contador2 + "')")
+                    console.log(contador2);
                     let modal = clone.querySelector("#modal")
-                    modal.setAttribute("data-bs-target","#modal"+dato.id_tema)
-                    clone.querySelector("#exampleModal").id = "modal"+dato.id_tema
+                    modal.setAttribute("data-bs-target", "#modal" + dato.id_tema)
+                    clone.querySelector("#collapseExample").id = "modal" + dato.id_tema
                     let btntema = clone.querySelector("#btnAcordion")
-                    btntema.setAttribute("data-bs-target","#vertema"+dato.id_tema)
-                    btntema.setAttribute("aria-controls","vertema"+dato.id_tema)
-                    clone.querySelector("#ver").id = "vertema"+dato.id_tema
+                    btntema.setAttribute("data-bs-target", "#vertema" + dato.id_tema)
+                    btntema.setAttribute("aria-controls", "vertema" + dato.id_tema)
+                    clone.querySelector("#ver").id = "vertema" + dato.id_tema
                     let cantidad = 0;
                     subtema.forEach(element => {
                         if (element.id_tema == dato.id_tema) {

@@ -130,12 +130,46 @@ if (isset($_SESSION["user"])) {
 
 
                 <div>
-                    <button id="modal" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <!-- <button id="modal" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Agragar
-                    </button>
+                    </button> -->
+
+                    <p>
+                        <button id="modal" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Agragar
+                        </button>
+                        <button class="btn btn-primary">Debatir</button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <form action="../backend/insertarSubtema/controller.php" method="POST">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" name="titulo" id="floatingInput" placeholder=" ">
+                                    <label for="floatingInput">Titulo</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" name="texto" placeholder="" id="floatingTextarea2" style="height: 400px"></textarea>
+                                    <label for="floatingTextarea2">Texto</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" name="cita" id="floatingInput2" placeholder=" ">
+                                    <label for="floatingInput2">Cita</label>
+                                </div>
+                                <br>
+                                <div hidden>
+                                    <input id="idtema" type="text" name="idtema">
+                                    <input type="text" name="usuario" value="<?php echo $_SESSION['ID'] ?>">
+                                    <button class="enviar"></button>
+                                </div>
+
+                            </form>
+                            <button id="btnEnvio" type="button" class="btn btn-primary">publicar</button>
+
+                        </div>
+                    </div>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -159,10 +193,12 @@ if (isset($_SESSION["user"])) {
                                         <br>
                                         <div hidden>
                                             <input id="idtema" type="text" name="idtema">
-                                            <input type="text" name="usuario" value="<?php echo $_SESSION['ID'] ?>">
+                                            <input type="text" name="usuario" value="<?php //echo $_SESSION['ID'] 
+                                                                                        ?>">
                                             <button class="enviar"></button>
                                         </div>
 
+                                    </form>
 
 
 
@@ -173,9 +209,8 @@ if (isset($_SESSION["user"])) {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                  
-                    <button class="btn btn-primary">Debatir</button>
+                    </div> -->
+
                 </div>
 
             </div>
@@ -214,7 +249,7 @@ if (isset($_SESSION["user"])) {
                             <input id="radio5" type="radio" name="estrellas" value="1">
                             <label for="radio5">★</label>
                         </p>
-                            <button class="btn btn-secondary btn-sm">valorar</button>
+                        <button class="btn btn-secondary btn-sm">valorar</button>
                     </form>
                 </div>
             </div>
