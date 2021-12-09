@@ -170,8 +170,7 @@ if (isset($_SESSION["user"])) {
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-primary">Ant</button>
-                    <button class="btn btn-primary">Sig</button>
+                
                     <button class="btn btn-primary">Debatir</button>
                 </div>
 
