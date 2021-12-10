@@ -55,6 +55,7 @@ if (isset($_SESSION["user"])) {
             </div>
         </nav>
     </header>
+    <div class="d-grid gap-2"><a class="btn btn-danger" href="../pages/tema.php">Iniciar Tema</a></div>
 
     <div id="contenido">
         <div hidden>
