@@ -91,6 +91,42 @@ const llamatemas = () => {
 
             }
 
+            if (valor == 3) {
+                for (let dato of datos) {
+                    temas.push(dato)
+                }
+
+
+                function ordenarAsc(p_array_json, p_key) {
+                    p_array_json.sort(function (a, b) {
+                        return a[p_key] < b[p_key];
+                    });
+                }
+
+                ordenarAsc(temas, "cantidad_subtemas")
+                console.log(temas);
+
+
+            }
+
+            if (valor == 4) {
+                for (let dato of datos) {
+                    temas.push(dato)
+                }
+
+
+                function ordenarAsc(p_array_json, p_key) {
+                    p_array_json.sort(function (a, b) {
+                        return a[p_key] > b[p_key];
+                    });
+                }
+
+                ordenarAsc(temas, "cantidad_subtemas")
+                console.log(temas);
+
+
+            }
+
             for (let dato of temas) {
                 let contador = 0;
                 let contador2 = 0;

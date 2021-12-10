@@ -76,7 +76,6 @@ const llamatemas = () => {
                 for (let dato of data) {
                     temas.push(dato)
                 }
-                console.log(temas);
 
 
             }
@@ -86,7 +85,42 @@ const llamatemas = () => {
                 for (let dato of data) {
                     temas.push(dato)
                 }
+
+            }
+
+            if (valor == 3) {
+                for (let dato of datos) {
+                    temas.push(dato)
+                }
+
+
+                function ordenarAsc(p_array_json, p_key) {
+                    p_array_json.sort(function (a, b) {
+                        return a[p_key] < b[p_key];
+                    });
+                }
+
+                ordenarAsc(temas,"cantidad_subtemas")
                 console.log(temas);
+
+
+            }
+
+            if (valor == 4) {
+                for (let dato of datos) {
+                    temas.push(dato)
+                }
+
+
+                function ordenarAsc(p_array_json, p_key) {
+                    p_array_json.sort(function (a, b) {
+                        return a[p_key] > b[p_key];
+                    });
+                }
+
+                ordenarAsc(temas,"cantidad_subtemas")
+                console.log(temas);
+
 
             }
 
@@ -105,9 +139,9 @@ const llamatemas = () => {
 
                 if (contador > 0) {
 
-                    
+
                     contador2++;
-                    
+
 
 
                     const clone = templateTema.cloneNode(true);
@@ -116,7 +150,6 @@ const llamatemas = () => {
                     clone.querySelector("#idtema").value = dato.id_tema;
                     let btn = clone.querySelector("#btnEnvio")
                     btn.setAttribute("onclick", "btnEnv('" + contador2 + "')")
-                    console.log(contador2);
                     let modal = clone.querySelector("#modal")
                     modal.setAttribute("data-bs-target", "#modal" + dato.id_tema)
                     clone.querySelector("#collapseExample").id = "modal" + dato.id_tema

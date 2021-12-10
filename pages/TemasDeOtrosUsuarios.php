@@ -62,6 +62,7 @@ if (isset($_SESSION["user"])) {
             <option value="1">Recientes</option>
             <option value="2">Antiguos</option>
             <option value="3">Con mas aportes</option>
+            <option value="4">con menos aportes</option>
         </select>
     </div>
 
