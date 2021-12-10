@@ -53,8 +53,6 @@ if (isset($_SESSION["user"])) {
                                     <a class="nav-link active" href="administracion.php">administacion</a>
                                 </li>';
                             }
-
-                            echo $_SESSION["perfil"];
                             ?>
 
                             <li class="nav-item">
