@@ -80,7 +80,7 @@ if (isset($_SESSION["user"])) {
 
     <div hidden>
 
-        <form action="../backend/inserteEtiqueta.php/controller.php" method="POST">
+        <form action="../backend/inserteEtiqueta/controller.php" method="POST">
 
             <input name="id_usuario" type="text" value="<?php echo $_SESSION['ID'] ?>">
             <input id="jso" name="json" type="text" value="valorjson">

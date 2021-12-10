@@ -22,32 +22,37 @@
         <div class="text-white">
             <h1>Registro</h1>
         </div>
-        <form>
+        <form action="../backend/registro/controller.php" method="POST">
             <div class=" form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <input type="email" name="correo" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="Text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <label for="floatingInput">Nombre de Usuario</label>
+                <input type="Text" name="user" class="form-control" id="floatingInput2" placeholder="name@example.com" required>
+                <label for="floatingInput2">Nombre de Usuario</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                 <label for="floatingPassword">Contraseña</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
-                <label for="floatingPassword">Repita su contraseña</label>
+                <input type="password" class="form-control" id="floatingPassword2" placeholder="Password" required>
+                <label for="floatingPassword2">Repita su contraseña</label>
             </div>
-            <button type="submit" class="btn btn-primary">Registrarme</button>
+            <div hidden>
+                <input id="passencrip" name="pass" type="text" name="passencrip">
+                <button id="envio" type="submit" class="btn btn-primary">envio</button>
+
+            </div>
         </form>
+        <button id="registrarme" type="submit" class="btn btn-primary">Registrarme</button>
 
         <hr>
 
         <div>
-            <button class="btn btn-primary">Facebook</button>
-            <button class="btn btn-danger">Gmail</button>
-            <button class="btn btn-primary opacity-75">Twitter</button>
+            <button id="facebook" class="btn btn-primary">Facebook</button>
+            <button id="gmail" class="btn btn-danger">Gmail</button>
+            <button id="twitter" class="btn btn-primary opacity-75">Twitter</button>
         </div>
 
         <br><br>
@@ -57,7 +62,8 @@
 
 
 
-
+    <script src="../js/md5.js"></script>
+    <script src="../js/registro.js"></script>
     </body>
     <?php include_once("analyticstracking.php") ?>
 
