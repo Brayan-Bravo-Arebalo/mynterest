@@ -59,6 +59,14 @@ if (isset($_SESSION["user"])) {
     <br>
 
     <div class="d-grid gap-2"><a class="btn btn-danger" href="../pages/tema.php">Iniciar Tema</a></div>
+    <br>
+    <div>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option value="1">Recientes</option>
+            <option value="2">Antiguos</option>
+            <option value="3">Con mas aportes</option>
+        </select>
+    </div>
 
     <div id="contenido">
         <div hidden>
