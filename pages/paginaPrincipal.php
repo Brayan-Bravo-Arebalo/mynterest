@@ -151,19 +151,21 @@ if (isset($_SESSION["user"])) {
                     <div class="collapse" id="collapseExample">
                         <div class="card card-body">
                             <form action="../backend/insertarSubtema/controller.php" method="POST">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="titulo" id="floatingInput" placeholder=" ">
-                                    <label for="floatingInput">Titulo</label>
+                                <div class="comprobar">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" name="titulo" id="floatingInput" placeholder=" ">
+                                        <label for="floatingInput">Titulo</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control" name="texto" placeholder="" id="floatingTextarea2" style="height: 400px"></textarea>
+                                        <label for="floatingTextarea2">Texto</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" name="cita" id="floatingInput2" placeholder=" ">
+                                        <label for="floatingInput2">Cita</label>
+                                    </div>
+                                    <br>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <textarea class="form-control" name="texto" placeholder="" id="floatingTextarea2" style="height: 400px"></textarea>
-                                    <label for="floatingTextarea2">Texto</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="cita" id="floatingInput2" placeholder=" ">
-                                    <label for="floatingInput2">Cita</label>
-                                </div>
-                                <br>
                                 <div hidden>
                                     <input id="idtema" type="text" name="idtema">
                                     <input type="text" name="usuario" value="<?php echo $_SESSION['ID'] ?>">
@@ -266,6 +268,7 @@ if (isset($_SESSION["user"])) {
     </template>
 
     <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/ValidadorTexto.js"></script>
     <script src="../js/paginaPrincipal.js"></script>
     <script src="../js/subtema.js"></script>
 </body>
