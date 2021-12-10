@@ -47,6 +47,16 @@ if (isset($_SESSION["user"])) {
                             <li class="nav-item">
                                 <a class="nav-link active" href="etiquetas.php">etiquetas</a>
                             </li>
+                            <?php
+                            if ($_SESSION["perfil"] == "admin") {
+                                echo '<li class="nav-item">
+                                    <a class="nav-link active" href="administracion.php">administacion</a>
+                                </li>';
+                            }
+
+                            echo $_SESSION["perfil"];
+                            ?>
+
                             <li class="nav-item">
                                 <a class="nav-link active" href="cerrarSesion.php">cerrar Sesion</a>
                             </li>
@@ -57,6 +67,7 @@ if (isset($_SESSION["user"])) {
         </nav>
     </header>
     <br>
+
 
     <div class="d-grid gap-2"><a class="btn btn-danger" href="../pages/tema.php">Iniciar Tema</a></div>
     <br>

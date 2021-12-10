@@ -10,10 +10,13 @@ if (!empty($userEmail) && !empty($password)) {
 
     if ($id > 0) {
 
+        $perfil = perfil($id);
+
 
         session_start();
         $_SESSION["user"] = $userEmail;
         $_SESSION["ID"] = $id;
+        $_SESSION["perfil"] = $perfil;
 
 
         header("location:../../pages/paginaPrincipal.php");
