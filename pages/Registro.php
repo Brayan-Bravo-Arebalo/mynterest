@@ -7,13 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/registro.css">
 </head>
 
 <body">
 
-    <div>
+    <div class="card text-center bg-dark bg-opacity-25">
+        <div class="container">
+            <div class="d-grid gap-2 d-flex justify-content-end">
+                <div> <a href="../index.php" class="btn btn-secondary">volver</a> </div>
+                <div> <a href="../pages/InicioSesion.php" class="btn btn-secondary">Iniciar Sesion</a> </div>
+            </div>
+        </div>
+        <div class="text-white">
+            <h1>Registro</h1>
+        </div>
         <form>
-            <div class="form-floating mb-3">
+            <div class=" form-floating mb-3">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
             </div>
@@ -29,11 +39,7 @@
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Repita su contraseña</label>
             </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Registrarme</button>
         </form>
     </div>
 
@@ -47,7 +53,7 @@
 
 
 
-</body>
-<?php include_once("analyticstracking.php") ?>
+    </body>
+    <?php include_once("analyticstracking.php") ?>
 
 </html>

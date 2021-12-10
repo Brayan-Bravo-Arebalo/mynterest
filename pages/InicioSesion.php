@@ -11,6 +11,12 @@
 </head>
 
 <body class="m-0 vh-100 row justify-content-center align-items-center" style="backdrop-filter: blur(5px)">
+    <div class="container">
+        <div class="d-grid gap-2 d-flex justify-content-end">
+            <div> <a href="../index.php" class="btn btn-secondary">volver</a> </div>
+            <div> <a href="../pages/Registro.php" class="btn btn-secondary">Registrame </a> </div>
+        </div>
+    </div>
 
     <div class="bg-white  text-center">
         <form action="../backend/inicioSesion/loginController.php" method="POST">
