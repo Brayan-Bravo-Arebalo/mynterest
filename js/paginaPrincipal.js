@@ -12,6 +12,21 @@ const fragment2 = document.createDocumentFragment()
 const listaTemas = document.getElementById("listaTemas")
 
 let numeor = 0
+let valor = 1;
+
+const SelectPrincipal = document.getElementById("selectPrincipal");
+
+SelectPrincipal.addEventListener("change", () => {
+
+    valor = SelectPrincipal.value;
+    temas = [];
+    listaTemas.replaceChildren(" ");
+
+
+    llamatemas();
+
+
+})
 
 
 
@@ -56,8 +71,28 @@ const llamatemas = () => {
     fetch("../backend/LlamadaTemas.php?tema=1")
         .then(datos => datos.json())
         .then(datos => {
+            if (valor == 1) {
+                const data = datos.reverse()
+                for (let dato of data) {
+                    temas.push(dato)
+                }
+                console.log(temas);
+
+
+            }
+
+            if (valor == 2) {
+                const data = datos.sort()
+                for (let dato of data) {
+                    temas.push(dato)
+                }
+                console.log(temas);
+
+            }
+
+
             let contador2 = 0;
-            for (let dato of datos) {
+            for (let dato of temas) {
                 let contador = 0;
 
 
@@ -70,9 +105,9 @@ const llamatemas = () => {
 
                 if (contador > 0) {
 
-                    console.log(contador2);
+                    
                     contador2++;
-                    console.log(contador2);
+                    
 
 
                     const clone = templateTema.cloneNode(true);

@@ -13,6 +13,22 @@ const listaTemas = document.getElementById("listaTemas")
 
 let numeor = 0
 
+let valor = 1;
+
+const SelectPrincipal = document.getElementById("selectPrincipal");
+
+SelectPrincipal.addEventListener("change", () => {
+
+    valor = SelectPrincipal.value;
+    temas = [];
+    listaTemas.replaceChildren(" ");
+
+
+    llamatemas();
+
+
+})
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -56,8 +72,26 @@ const llamatemas = () => {
     fetch("../backend/LlamadaTemas.php?tema=1")
         .then(datos => datos.json())
         .then(datos => {
+            if (valor == 1) {
+                const data = datos.reverse()
+                for (let dato of data) {
+                    temas.push(dato)
+                }
+                console.log(temas);
 
-            for (let dato of datos) {
+
+            }
+
+            if (valor == 2) {
+                const data = datos.sort()
+                for (let dato of data) {
+                    temas.push(dato)
+                }
+                console.log(temas);
+
+            }
+
+            for (let dato of temas) {
                 let contador = 0;
                 let contador2 = 0;
 
@@ -72,7 +106,7 @@ const llamatemas = () => {
                     clone.querySelector(".importancia").textContent = dato.importancia;
                     clone.querySelector("#idtema").value = dato.id_tema;
                     let btn = clone.querySelector("#btnEnvio")
-                    btn.setAttribute("onclick","btnEnv('"+contador2+"')")
+                    btn.setAttribute("onclick", "btnEnv('" + contador2 + "')")
                     let modal = clone.querySelector("#modal")
                     modal.setAttribute("data-bs-target", "#modal" + dato.id_tema)
                     clone.querySelector("#collapseExample").id = "modal" + dato.id_tema
