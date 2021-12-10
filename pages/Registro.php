@@ -12,7 +12,7 @@
 
 <body">
 
-    <div class="card text-center bg-dark bg-opacity-25">
+    <div class="card text-center bg-dark bg-opacity-50">
         <div class="container">
             <div class="d-grid gap-2 d-flex justify-content-end">
                 <div> <a href="../index.php" class="btn btn-secondary">volver</a> </div>
@@ -24,32 +24,37 @@
         </div>
         <form>
             <div class=" form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="Text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                 <label for="floatingInput">Nombre de Usuario</label>
             </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                 <label for="floatingPassword">Contraseña</label>
             </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                 <label for="floatingPassword">Repita su contraseña</label>
             </div>
             <button type="submit" class="btn btn-primary">Registrarme</button>
         </form>
+
+        <hr>
+
+        <div>
+            <button class="btn btn-primary">Facebook</button>
+            <button class="btn btn-danger">Gmail</button>
+            <button class="btn btn-primary opacity-75">Twitter</button>
+        </div>
+
+        <br><br>
+
     </div>
 
-    <hr>
 
-    <div>
-        <button class="btn btn-primary">Facebook</button>
-        <button class="btn btn-danger">Gmail</button>
-        <button class="btn btn-primary opacity-75">Twitter</button>
-    </div>
 
 
 
