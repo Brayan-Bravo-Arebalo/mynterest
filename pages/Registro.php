@@ -50,9 +50,9 @@
         <hr>
 
         <div>
-            <button id="facebook" class="btn btn-primary">Facebook</button>
-            <button id="gmail" class="btn btn-danger">Gmail</button>
-            <button id="twitter" class="btn btn-primary opacity-75">Twitter</button>
+            <button onclick="mensaje()" id="facebook" class="btn btn-primary">Facebook</button>
+            <button onclick="mensaje()" id="gmail" class="btn btn-danger">Gmail</button>
+            <button onclick="mensaje()" id="twitter" class="btn btn-primary opacity-75">Twitter</button>
         </div>
 
         <br><br>
@@ -64,6 +64,7 @@
 
     <script src="../js/md5.js"></script>
     <script src="../js/registro.js"></script>
+    <script src="../js/mensaje.js"></script>
     </body>
     <?php include_once("analyticstracking.php") ?>
 

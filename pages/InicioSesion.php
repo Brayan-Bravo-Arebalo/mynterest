@@ -47,9 +47,9 @@
             <hr>
 
             <div class="text-center">
-                <button class="btn btn-primary">Facebook</button>
-                <button class="btn btn-danger">Gmail</button>
-                <button class="btn btn-primary opacity-75">Twitter</button>
+                <button onclick="mensaje()" class="btn btn-primary">Facebook</button>
+                <button onclick="mensaje()" class="btn btn-danger">Gmail</button>
+                <button onclick="mensaje()" class="btn btn-primary opacity-75">Twitter</button>
             </div>
             <br>
         </div>
@@ -57,6 +57,7 @@
 
         <script src="../js/md5.js"></script>
         <script src="../js/inicioSesion.js"></script>
+        <script src="../js/mensaje.js"></script>
 </body>
 <?php include_once("analyticstracking.php") ?>
 
