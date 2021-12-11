@@ -47,6 +47,9 @@ if (isset($_SESSION["user"])) {
                             <li class="nav-item">
                                 <a class="nav-link active" href="etiquetas.php">etiquetas</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="debatir.php">Debatir</a>
+                            </li>
                             <?php
                             if ($_SESSION["perfil"] == "admin") {
                                 echo '<li class="nav-item">

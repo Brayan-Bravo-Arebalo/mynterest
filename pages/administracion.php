@@ -38,6 +38,17 @@
                                 <a class="nav-link active" href="etiquetas.php">etiquetas</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link active" href="debatir.php">Debatir</a>
+                            </li>
+                            <?php
+                            if ($_SESSION["perfil"] == "admin") {
+                                echo '<li class="nav-item">
+                                    <a class="nav-link active" href="administracion.php">administacion</a>
+                                </li>';
+                            }
+                            ?>
+
+                            <li class="nav-item">
                                 <a class="nav-link active" href="cerrarSesion.php">cerrar Sesion</a>
                             </li>
                         </ul>
@@ -48,7 +59,7 @@
     </header>
 
     <div class="card-group">
-        <div class="card text-center" >
+        <div class="card text-center">
             <h5 class="card-header">Usuarios</h5>
             <div class="card-body">
                 <h1 id="cantidadUsuarios" class="card-title">
@@ -66,7 +77,7 @@
 
             </div>
         </div>
-        <div class="card text-center" >
+        <div class="card text-center">
             <h5 class="card-header">Aportes</h5>
             <div class="card-body">
                 <h1 id="cantidadSubtemas" class="card-title">
@@ -95,13 +106,13 @@
                     <h5>Usuario: <h6 id="usuarioTema">
                             </ph6 </h5>
                 </div>
-    
+
             </div>
         </div>
         <div class="card text-center">
             <h5 class="card-header">Ultimo Aporte</h5>
             <div class="card-body">
-    
+
                 <div>
                     <h5>Titulo: <h6 id="tituloSubtema">
                             </ph6 </h5>
@@ -114,9 +125,9 @@
                     <h5>Usuario: <h6 id="usuarioSubtema">
                             </ph6 </h5>
                 </div>
-    
-    
-    
+
+
+
             </div>
         </div>
     </div>

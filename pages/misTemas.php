@@ -36,7 +36,7 @@ if (isset($_SESSION["user"])) {
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="misTemas.php">Mis Temas</a></li>
-                                    <li><a class="dropdown-item" href="#">Otros temas</a></li>
+                                    <li><a class="dropdown-item" href="TemasDeOtrosUsuarios.php">Otros temas</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -46,6 +46,17 @@ if (isset($_SESSION["user"])) {
                             <li class="nav-item">
                                 <a class="nav-link active" href="etiquetas.php">etiquetas</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="debatir.php">Debatir</a>
+                            </li>
+                            <?php
+                            if ($_SESSION["perfil"] == "admin") {
+                                echo '<li class="nav-item">
+                                    <a class="nav-link active" href="administracion.php">administacion</a>
+                                </li>';
+                            }
+                            ?>
+
                             <li class="nav-item">
                                 <a class="nav-link active" href="cerrarSesion.php">cerrar Sesion</a>
                             </li>
